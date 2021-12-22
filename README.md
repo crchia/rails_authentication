@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails implementation of a user-authentication API using session-based authentication.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Feel free to clone the repo and test out the API for yourself!
+- To boot up the server, run `rails server` in the root directory.
+- To modify the Cross Origin Resource Sharing rules, see `cors.rb`.
