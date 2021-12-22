@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post 'signup', to: 'users#create'  
   put 'users', to: 'users#update'
 
+  put 'users/password', to: 'passwords#update'
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
