@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
   end
 
   # POST /auth
+  # log in the user
   def create
     # find the current user by email
     user = User.find_by(email: params[:email])

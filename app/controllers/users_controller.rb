@@ -15,14 +15,12 @@ class UsersController < ApplicationController
     rescue ActiveRecord::RecordInvalid => invalid
       json_response({success: false,
                      errors: invalid.record.errors})
-    # rescue => err
-    #   json_response({message: err.to_s})
   end
 
-  # PUT /users/:user_id
+  # PUT /users
   def update
     # attempt to update the user info
-    Current.user.update!(user_params)
+    Current.user.update!(user_update_params)
     json_response({success: true})
 
     # update failed, return error messages
@@ -34,5 +32,9 @@ class UsersController < ApplicationController
   private
     def user_params
       params.permit(:username, :email, :password, :password_confirmation)
+    end
+
+    def user_update_params
+      params.permit(:username, :email)
     end
 end
